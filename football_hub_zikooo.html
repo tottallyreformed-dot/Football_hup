@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Football Hub</title>
+<style>
+*{box-sizing:border-box}body{margin:0;font-family:Arial;background:radial-gradient(circle at top,#124d32 0,#07130d 42%,#030906 100%);color:#fff;min-height:100vh}
+header{text-align:center;padding:38px 18px;background:linear-gradient(135deg,#0b6338,#07130d)}
+header h1{margin:0;font-size:38px}.sub{margin-top:8px;color:#c8e8d7}
+main{max-width:900px;margin:28px auto;padding:0 16px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.card{background:linear-gradient(145deg,rgba(22,55,39,.95),rgba(8,25,17,.95));border:1px solid #28734e;border-radius:20px;padding:22px;cursor:pointer;transition:.2s;box-shadow:0 12px 35px rgba(0,0,0,.28)}
+.card:hover{transform:translateY(-3px)}
+.logo{width:72px;height:72px;border-radius:16px;background:white;color:#111;display:grid;place-items:center;font-weight:bold;font-size:23px;margin-bottom:14px}
+.card h2{margin:0 0 7px}.small{color:#a9cbbb;line-height:1.6}
+.detail{display:none;background:linear-gradient(145deg,rgba(20,52,37,.98),rgba(7,24,16,.98));border:1px solid #28734e;border-radius:22px;padding:30px;box-shadow:0 15px 45px rgba(0,0,0,.35)}
+.detail h2{font-size:32px;margin-top:0}.detail p,.detail li{color:#d8e9df;line-height:1.9}.btn{display:block;text-align:center;text-decoration:none;background:#19a463;color:white;padding:15px;border-radius:12px;font-weight:bold;margin-top:22px}
+.back{display:inline-block;margin-bottom:18px;color:#9fe0bd;cursor:pointer}
+</style>
+</head>
+<body>
+<header><div style="font-size:14px;color:#8ff0ba;margin-bottom:14px;font-weight:bold">CREATE BY ZikoFoootball</div><h1>⚽ Football Hub</h1><div class="sub">أفضل التطبيقات والأدوات لعشاق كرة القدم</div></header>
+<main>
+<div id="home" class="grid">
+<div class="card" onclick="showDetail()"><div class="logo">FM</div><h2>FotMob</h2><div class="small">تابع النتائج والأخبار والإحصائيات الكروية في مكان واحد.</div></div>
+</div>
+<div id="detail" class="detail">
+<div class="back" onclick="showHome()">← رجوع للتطبيقات</div>
+<div class="logo">FM</div>
+<h2>FotMob</h2>
+<p>FotMob تطبيق كروي شامل لعشاق كرة القدم. من خلاله تقدر تتابع المباريات والنتائج المباشرة لحظة بلحظة، وتشوف التشكيلات، الإحصائيات، تقييمات اللاعبين، الأخبار والانتقالات. كما يمكنك اختيار الفرق والبطولات اللي كتهمك باش تبقى على اطلاع دائم.</p>
+<p>📌 التطبيق مناسب لأي شخص باغي يجمع أخبار ونتائج وإحصائيات كرة القدم في مكان واحد، سواء كنت كتتابع الدوري الإسباني، الإنجليزي، دوري الأبطال أو بطولات أخرى.</p>
+<h3>🔥 أهم المميزات</h3>
+<ul><li>نتائج مباشرة وتنبيهات الأهداف</li><li>إحصائيات مفصلة وتقييمات اللاعبين</li><li>أخبار وانتقالات كرة القدم</li><li>مواعيد المباريات والقنوات التلفزيونية</li></ul>
+<a class="btn" href="https://play.google.com/store/apps/details?id=com.mobilefootie.wc2010" target="_blank">🤖 تحميل من Google Play</a>
+<a class="btn" href="https://apps.apple.com/app/fotmob-live-soccer-scores/id488575683" target="_blank">🍎 تحميل من App Store</a>
+</div>
+</main>
+<script>
+function showDetail(){home.style.display='none';detail.style.display='block'}
+function showHome(){detail.style.display='none';home.style.display='grid'}
+</script>
+</body></html>
