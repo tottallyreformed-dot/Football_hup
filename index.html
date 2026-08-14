@@ -3,10 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
+
 <title>Football Hub</title>
 
 <style>
-*{box-sizing:border-box}
+
+*{
+box-sizing:border-box
+}
 
 body{
 margin:0;
@@ -16,24 +20,102 @@ color:#fff;
 min-height:100vh
 }
 
+/* HEADER */
+
 header{
 text-align:center;
-padding:38px 18px;
+padding:30px 18px;
 background:linear-gradient(135deg,#0b6338,#07130d)
 }
 
-header h1{margin:0;font-size:38px}
+/* PROFILE */
+
+.profile{
+display:flex;
+align-items:center;
+justify-content:center;
+gap:12px;
+margin-bottom:20px
+}
+
+.profile-img{
+width:75px;
+height:75px;
+border-radius:50%;
+object-fit:cover;
+background:#19a463;
+border:3px solid #69d99d;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:35px
+}
+
+.profile-name{
+font-size:20px;
+font-weight:bold
+}
+
+.profile-name small{
+display:block;
+font-size:13px;
+color:#9fe0bd;
+margin-top:5px
+}
+
+header h1{
+margin:0;
+font-size:36px
+}
 
 .sub{
 margin-top:8px;
 color:#c8e8d7
 }
 
+
+/* MAIN */
+
 main{
 max-width:900px;
 margin:28px auto;
 padding:0 16px
 }
+
+
+/* MENU */
+
+.menu{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:15px;
+margin-bottom:25px
+}
+
+.menu-btn{
+background:linear-gradient(145deg,#163927,#081911);
+border:1px solid #28734e;
+border-radius:18px;
+padding:20px;
+color:white;
+font-size:18px;
+font-weight:bold;
+cursor:pointer;
+transition:.2s
+}
+
+.menu-btn:hover{
+transform:translateY(-3px);
+background:#174a31
+}
+
+.menu-btn.active{
+background:#19a463;
+border-color:#72e0a5
+}
+
+
+/* CARDS */
 
 .grid{
 display:grid;
@@ -55,9 +137,21 @@ box-shadow:0 12px 35px rgba(0,0,0,.28)
 transform:translateY(-3px)
 }
 
+.card-icon{
+width:75px;
+height:75px;
+border-radius:16px;
+background:#19a463;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:38px;
+margin-bottom:14px
+}
+
 .logo{
-width:72px;
-height:72px;
+width:75px;
+height:75px;
 border-radius:16px;
 object-fit:cover;
 display:block;
@@ -73,6 +167,9 @@ margin:0 0 7px
 color:#a9cbbb;
 line-height:1.6
 }
+
+
+/* DETAILS */
 
 .detail{
 display:none;
@@ -94,6 +191,13 @@ color:#d8e9df;
 line-height:1.9
 }
 
+.back{
+display:inline-block;
+margin-bottom:18px;
+color:#9fe0bd;
+cursor:pointer
+}
+
 .btn{
 display:block;
 text-align:center;
@@ -103,29 +207,131 @@ color:white;
 padding:15px;
 border-radius:12px;
 font-weight:bold;
-margin-top:22px
+margin-top:22px;
+border:0;
+width:100%;
+cursor:pointer;
+font-size:16px
 }
 
 .apple{
 background:#111
 }
 
-.back{
-display:inline-block;
-margin-bottom:18px;
-color:#9fe0bd;
-cursor:pointer
+
+/* GAME */
+
+.game-box{
+background:rgba(0,0,0,.22);
+border:1px solid #28734e;
+border-radius:18px;
+padding:20px;
+margin-top:20px
 }
+
+.game-input,
+.game-select{
+width:100%;
+padding:14px;
+border-radius:10px;
+border:1px solid #28734e;
+background:#07130d;
+color:white;
+font-size:16px;
+margin-top:8px
+}
+
+.stats{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:10px;
+margin-top:15px
+}
+
+.stat{
+background:#07130d;
+border:1px solid #28734e;
+border-radius:12px;
+padding:13px;
+text-align:center
+}
+
+.stat b{
+display:block;
+font-size:22px;
+margin-top:5px
+}
+
+.level{
+text-align:center;
+font-size:20px;
+margin:12px 0;
+color:#9fe0bd
+}
+
+.game-message{
+background:#07130d;
+border-radius:12px;
+padding:15px;
+margin-top:15px;
+color:#d8e9df;
+line-height:1.7;
+text-align:center
+}
+
+
+/* MOBILE */
+
+@media(max-width:500px){
+
+header h1{
+font-size:30px
+}
+
+.menu{
+grid-template-columns:1fr 1fr
+}
+
+.menu-btn{
+padding:16px 8px;
+font-size:16px
+}
+
+.detail{
+padding:22px
+}
+
+}
+
 </style>
 </head>
 
+
 <body>
+
 
 <header>
 
-<div style="font-size:14px;color:#8ff0ba;margin-bottom:14px;font-weight:bold">
-CREATE BY ZikoFoootball
+<div class="profile">
+
+<!-- من بعد غادي نحطو صورة البروفايل هنا -->
+
+<div class="profile-img">
+👤
 </div>
+
+<div class="profile-name">
+ZikoFootball
+<small>Football Hub ⚽</small>
+</div>
+
+</div>
+
+
+<div style="font-size:14px;color:#8ff0ba;margin-bottom:10px;font-weight:bold">
+CREATE BY ZikoFootball
+</div>
+
 
 <h1>⚽ Football Hub</h1>
 
@@ -135,18 +341,50 @@ CREATE BY ZikoFoootball
 
 </header>
 
+
+
 <main>
 
-<div id="home" class="grid">
 
-<!-- FotMob -->
+<!-- MENU -->
+
+<div class="menu">
+
+<button
+class="menu-btn active"
+id="appsBtn"
+onclick="showCategory('apps')">
+
+📱 التطبيقات
+
+</button>
+
+
+<button
+class="menu-btn"
+id="gamesBtn"
+onclick="showCategory('games')">
+
+🎮 الألعاب
+
+</button>
+
+</div>
+
+
+
+<!-- APPS -->
+
+<div id="appsSection" class="grid">
+
+
+<!-- FOTMOB -->
 
 <div class="card" onclick="showDetail('fotmob')">
 
-<img
-class="logo"
-src="fotmob.png"
-alt="FotMob">
+<div class="card-icon">
+📱
+</div>
 
 <h2>FotMob</h2>
 
@@ -157,14 +395,14 @@ alt="FotMob">
 </div>
 
 
-<!-- Real Madrid -->
+
+<!-- REAL MADRID -->
 
 <div class="card" onclick="showDetail('realmadrid')">
 
-<img
-class="logo"
-src="real_madrid.png"
-alt="Real Madrid">
+<div class="card-icon">
+⚪
+</div>
 
 <h2>Real Madrid</h2>
 
@@ -174,89 +412,113 @@ alt="Real Madrid">
 
 </div>
 
+
 </div>
 
 
-<!-- FotMob -->
+
+<!-- GAMES -->
+
+<div id="gamesSection" class="grid" style="display:none">
+
+
+<!-- FOOTBALL LIFE -->
+
+<div class="card" onclick="showDetail('footballgame')">
+
+<div class="card-icon">
+⚽
+</div>
+
+<h2>Football Life Simulator</h2>
+
+<div class="small">
+ابدأ مسيرتك الكروية، طوّر لاعبك والعب المباريات للوصول إلى القمة.
+</div>
+
+</div>
+
+
+</div>
+
+
+
+<!-- FOTMOB DETAIL -->
 
 <div id="fotmob" class="detail">
 
 <div class="back" onclick="showHome()">
-← رجوع للتطبيقات
+← رجوع
 </div>
 
-<img
-class="logo"
-src="fotmob.png"
-alt="FotMob">
+<div class="card-icon">
+📱
+</div>
 
 <h2>FotMob</h2>
 
 <p>
-FotMob تطبيق كروي شامل لعشاق كرة القدم. من خلاله تقدر تتابع
-المباريات والنتائج المباشرة لحظة بلحظة، وتشوف التشكيلات،
-الإحصائيات، تقييمات اللاعبين، الأخبار والانتقالات.
+FotMob تطبيق كروي شامل لعشاق كرة القدم.
+من خلاله تقدر تتابع المباريات والنتائج المباشرة،
+التشكيلات، الإحصائيات والأخبار.
 </p>
 
 <h3>🔥 أهم المميزات</h3>
 
 <ul>
-<li>نتائج مباشرة وتنبيهات الأهداف</li>
-<li>إحصائيات مفصلة وتقييمات اللاعبين</li>
-<li>أخبار وانتقالات كرة القدم</li>
-<li>مواعيد المباريات والقنوات التلفزيونية</li>
+<li>نتائج مباشرة</li>
+<li>إحصائيات اللاعبين</li>
+<li>أخبار كرة القدم</li>
+<li>مواعيد المباريات</li>
 </ul>
 
 <a
 class="btn"
 href="https://play.google.com/store/apps/details?id=com.mobilefootie.wc2010"
 target="_blank">
+
 🤖 تحميل من Google Play
+
 </a>
 
 <a
 class="btn apple"
 href="https://apps.apple.com/us/app/fotmob-soccer-live-scores/id488575683"
 target="_blank">
+
 🍎 تحميل من App Store
+
 </a>
 
 </div>
 
 
-<!-- Real Madrid -->
+
+<!-- REAL MADRID DETAIL -->
 
 <div id="realmadrid" class="detail">
 
 <div class="back" onclick="showHome()">
-← رجوع للتطبيقات
+← رجوع
 </div>
 
-<img
-class="logo"
-src="real_madrid.png"
-alt="Real Madrid">
+<div class="card-icon">
+⚪
+</div>
 
 <h2>Real Madrid App</h2>
 
 <p>
-التطبيق الرسمي لنادي ريال مدريد، والمصمم لعشاق النادي الملكي.
-يمكنك من خلاله متابعة آخر أخبار الفريق، المباريات، النتائج،
-المواعيد، الإحصائيات والمحتوى الحصري للنادي.
-</p>
-
-<p>
-📌 التطبيق يوفر تغطية قبل المباراة وأثناءها وبعدها،
-بالإضافة إلى الأخبار، الترتيب، المباريات وReal Madrid TV.
+التطبيق الرسمي لنادي ريال مدريد لعشاق النادي الملكي.
 </p>
 
 <h3>🔥 أهم المميزات</h3>
 
 <ul>
 <li>آخر أخبار ريال مدريد</li>
-<li>متابعة المباريات والنتائج</li>
-<li>مواعيد المباريات والبطولات</li>
-<li>إحصائيات ومعلومات عن الفريق</li>
+<li>المباريات والنتائج</li>
+<li>مواعيد المباريات</li>
+<li>إحصائيات الفريق</li>
 <li>فيديوهات ومحتوى حصري</li>
 <li>Real Madrid TV</li>
 </ul>
@@ -265,61 +527,569 @@ alt="Real Madrid">
 class="btn"
 href="https://play.google.com/store/apps/details?id=com.mcentric.mcclient.MyMadrid"
 target="_blank">
+
 🤖 تحميل من Google Play
+
 </a>
 
 <a
 class="btn apple"
 href="https://apps.apple.com/us/app/real-madrid/id1107624540"
 target="_blank">
+
 🍎 تحميل من App Store
+
 </a>
 
-<p style="text-align:center;color:#9fe0bd;font-size:13px;margin-top:22px">
-التطبيق الرسمي من Real Madrid C.F.
+</div>
+
+
+
+<!-- FOOTBALL LIFE SIMULATOR -->
+
+<div id="footballgame" class="detail">
+
+<div class="back" onclick="showHome()">
+← رجوع
+</div>
+
+
+<div class="card-icon">
+⚽
+</div>
+
+
+<h2>Football Life Simulator</h2>
+
+<p>
+ابدأ حياتك كلاعب كرة قدم وحاول الوصول إلى القمة!
 </p>
 
+
+<!-- START -->
+
+<div id="gameStart" class="game-box">
+
+<h3>🎮 إنشاء اللاعب</h3>
+
+<label>
+اسم اللاعب:
+</label>
+
+<input
+id="playerName"
+class="game-input"
+type="text"
+placeholder="مثلاً: Ziko"
+>
+
+
+<label style="display:block;margin-top:15px">
+المركز:
+</label>
+
+<select
+id="playerPosition"
+class="game-select">
+
+<option value="ST">
+⚽ مهاجم
+</option>
+
+<option value="CM">
+🎯 وسط
+</option>
+
+<option value="CB">
+🛡️ مدافع
+</option>
+
+<option value="GK">
+🧤 حارس
+</option>
+
+</select>
+
+
+<button
+class="btn"
+onclick="startGame()">
+
+🚀 ابدأ مسيرتي
+
+</button>
+
 </div>
+
+
+
+<!-- GAME -->
+
+<div id="game" style="display:none">
+
+
+<div class="game-box">
+
+<h2 id="playerTitle"></h2>
+
+<div class="level">
+⭐ المستوى:
+<span id="level">1</span>
+</div>
+
+<p style="text-align:center">
+النادي:
+<b id="club">Academy FC</b>
+</p>
+
+
+<div class="stats">
+
+<div class="stat">
+⚽ الأهداف
+<b id="goals">0</b>
+</div>
+
+<div class="stat">
+🏃 السرعة
+<b id="speed">50</b>
+</div>
+
+<div class="stat">
+🎯 التسديد
+<b id="shooting">50</b>
+</div>
+
+<div class="stat">
+💪 اللياقة
+<b id="fitness">50</b>
+</div>
+
+<div class="stat">
+⭐ التقييم
+<b id="rating">50</b>
+</div>
+
+<div class="stat">
+💰 المال
+<b id="money">100</b>
+</div>
+
+</div>
+
+</div>
+
+
+
+<div class="game-box">
+
+<h3>🏋️ التدريب</h3>
+
+<p>
+تدرب لتطوير لاعبك.
+</p>
+
+<button
+class="btn"
+onclick="train()">
+
+💪 تدريب
+
+</button>
+
+</div>
+
+
+
+<div class="game-box">
+
+<h3>⚽ المباراة</h3>
+
+<p>
+العب مباراة وحاول تحقيق الفوز.
+</p>
+
+<button
+class="btn"
+onclick="playMatch()">
+
+🔥 لعب المباراة
+
+</button>
+
+</div>
+
+
+<div
+class="game-message"
+id="gameMessage">
+
+🎮 حظاً موفقاً في مسيرتك!
+
+</div>
+
+
+</div>
+
+</div>
+
 
 </main>
 
 
+
 <script>
+
+
+let player={
+
+name:"",
+position:"",
+level:1,
+goals:0,
+speed:50,
+shooting:50,
+fitness:50,
+rating:50,
+money:100,
+club:"Academy FC"
+
+};
+
+
+
+/* CATEGORY */
+
+function showCategory(category){
+
+hideDetails();
+
+
+document.getElementById("appsSection").style.display=
+category==="apps" ? "grid" : "none";
+
+
+document.getElementById("gamesSection").style.display=
+category==="games" ? "grid" : "none";
+
+
+document.getElementById("appsBtn").classList.toggle(
+"active",
+category==="apps"
+);
+
+
+document.getElementById("gamesBtn").classList.toggle(
+"active",
+category==="games"
+);
+
+}
+
+
+
+/* DETAILS */
 
 function showDetail(app){
 
-document.getElementById('home').style.display='none';
+document.getElementById("appsSection").style.display="none";
 
-document.getElementById('fotmob').style.display='none';
+document.getElementById("gamesSection").style.display="none";
 
-document.getElementById('realmadrid').style.display='none';
+document.querySelector(".menu").style.display="none";
 
-document.getElementById(app).style.display='block';
+
+hideDetails();
+
+document.getElementById(app).style.display="block";
 
 }
+
+
+
+function hideDetails(){
+
+document.getElementById("fotmob").style.display="none";
+
+document.getElementById("realmadrid").style.display="none";
+
+document.getElementById("footballgame").style.display="none";
+
+}
+
+
 
 function showHome(){
 
-document.getElementById('fotmob').style.display='none';
+hideDetails();
 
-document.getElementById('realmadrid').style.display='none';
+document.querySelector(".menu").style.display="grid";
 
-document.getElementById('home').style.display='grid';
+showCategory("apps");
 
 }
 
+
+
+/* START GAME */
+
+function startGame(){
+
+let name=
+document.getElementById("playerName").value.trim();
+
+
+if(name===""){
+
+alert("كتب اسم اللاعب أولاً ⚽");
+
+return;
+
+}
+
+
+player.name=name;
+
+player.position=
+document.getElementById("playerPosition").value;
+
+player.level=1;
+
+player.goals=0;
+
+player.speed=50;
+
+player.shooting=50;
+
+player.fitness=50;
+
+player.rating=50;
+
+player.money=100;
+
+player.club="Academy FC";
+
+
+document.getElementById("gameStart").style.display="none";
+
+document.getElementById("game").style.display="block";
+
+
+updateGame();
+
+
+document.getElementById("gameMessage").innerHTML=
+"🔥 مرحباً "+player.name+
+"! بدأت مسيرتك مع Academy FC.";
+
+}
+
+
+
+/* TRAIN */
+
+function train(){
+
+let type=
+Math.floor(Math.random()*3);
+
+
+if(type===0){
+
+player.speed+=3;
+
+player.fitness+=2;
+
+player.rating+=2;
+
+document.getElementById("gameMessage").innerHTML=
+"🏃 تدريب السرعة نجح! السرعة +3 واللياقة +2.";
+
+}
+
+else if(type===1){
+
+player.shooting+=3;
+
+player.rating+=2;
+
+document.getElementById("gameMessage").innerHTML=
+"🎯 تدريب التسديد نجح! التسديد +3 والتقييم +2.";
+
+}
+
+else{
+
+player.fitness+=4;
+
+player.rating+=2;
+
+document.getElementById("gameMessage").innerHTML=
+"💪 تدريب اللياقة نجح! اللياقة +4 والتقييم +2.";
+
+}
+
+
+limitStats();
+
+updateGame();
+
+}
+
+
+
+/* MATCH */
+
+function playMatch(){
+
+let performance=
+(player.speed+
+player.shooting+
+player.fitness+
+player.rating)/4;
+
+
+let random=
+Math.floor(Math.random()*41)-20;
+
+
+let result=
+performance+random;
+
+
+if(result>=65){
+
+player.goals+=
+Math.floor(Math.random()*3)+1;
+
+player.money+=75;
+
+player.rating+=3;
+
+player.level+=1;
+
+
+document.getElementById("gameMessage").innerHTML=
+"🏆 فوز كبير! ربحت 75💰 وارتفع مستواك!";
+
+}
+
+else if(result>=50){
+
+player.money+=30;
+
+player.rating+=1;
+
+
+document.getElementById("gameMessage").innerHTML=
+"🤝 تعادل جيد! ربحت 30💰.";
+
+}
+
+else{
+
+player.money+=10;
+
+
+document.getElementById("gameMessage").innerHTML=
+"😕 خسرت المباراة. حاول التدريب أكثر.";
+
+}
+
+
+
+/* TRANSFERS */
+
+if(
+player.level>=5 &&
+player.club==="Academy FC"
+){
+
+player.club="Beni Mellal FC";
+
+document.getElementById("gameMessage").innerHTML+=
+"<br><br>🚀 انتقال جديد! أصبحت لاعباً في Beni Mellal FC.";
+
+}
+
+
+if(
+player.level>=10 &&
+player.club==="Beni Mellal FC"
+){
+
+player.club="Morocco Stars";
+
+document.getElementById("gameMessage").innerHTML+=
+"<br><br>🌟 انتقال ضخم! أصبحت لاعباً في Morocco Stars.";
+
+}
+
+
+limitStats();
+
+updateGame();
+
+}
+
+
+
+/* LIMIT */
+
+function limitStats(){
+
+player.speed=
+Math.min(player.speed,99);
+
+player.shooting=
+Math.min(player.shooting,99);
+
+player.fitness=
+Math.min(player.fitness,99);
+
+player.rating=
+Math.min(player.rating,99);
+
+}
+
+
+
+/* UPDATE */
+
+function updateGame(){
+
+document.getElementById("playerTitle").innerHTML=
+"👤 "+player.name;
+
+document.getElementById("level").innerText=
+player.level;
+
+document.getElementById("club").innerText=
+player.club;
+
+document.getElementById("goals").innerText=
+player.goals;
+
+document.getElementById("speed").innerText=
+player.speed;
+
+document.getElementById("shooting").innerText=
+player.shooting;
+
+document.getElementById("fitness").innerText=
+player.fitness;
+
+document.getElementById("rating").innerText=
+player.rating;
+
+document.getElementById("money").innerText=
+player.money;
+
+}
+
+
 </script>
 
-
-<!-- Cloudflare Web Analytics -->
-
-<script
-type="module"
-src="https://static.cloudflareinsights.com/beacon.min.js"
-data-cf-beacon='{"token": "cae1ecd5b2b2481da5c65330bd65108d"}'>
-</script>
-
-<!-- End Cloudflare Web Analytics -->
 
 </body>
 </html>
