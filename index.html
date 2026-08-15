@@ -29,7 +29,7 @@ border-radius:50%;
 object-fit:cover;
 margin:0 auto 10px;
 display:block;
-border:3px solid #8ff0ba;
+border:3px solid #8ff0ba
 }
 
 header h1{
@@ -37,9 +37,7 @@ margin:8px 0;
 font-size:36px
 }
 
-.sub{
-color:#c8e8d7
-}
+.sub{color:#c8e8d7}
 
 main{
 max-width:900px;
@@ -65,9 +63,7 @@ font-weight:bold;
 cursor:pointer
 }
 
-.menu button.active{
-background:#19a463
-}
+.menu button.active{background:#19a463}
 
 .grid{
 display:grid;
@@ -88,9 +84,7 @@ cursor:pointer;
 transition:.2s
 }
 
-.card:hover{
-transform:translateY(-3px)
-}
+.card:hover{transform:translateY(-3px)}
 
 .logo{
 width:72px;
@@ -101,26 +95,12 @@ background:white;
 margin-bottom:12px
 }
 
-.icon{
-width:72px;
-height:72px;
-border-radius:15px;
-background:#19a463;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:38px;
-margin-bottom:12px
-}
-
 .small,p,li{
 color:#cfe3d7;
 line-height:1.7
 }
 
-.detail{
-display:none
-}
+.detail{display:none}
 
 .back{
 color:#9fe0bd;
@@ -140,9 +120,7 @@ margin-top:15px;
 font-weight:bold
 }
 
-.apple{
-background:#111
-}
+.apple{background:#111}
 </style>
 </head>
 
@@ -184,7 +162,7 @@ onclick="category('games')">
 
 <div id="apps" class="grid">
 
-<div class="card" onclick="openPage('fotmob')">
+<div class="card" onclick="openPage('fotmob','apps')">
 
 <img class="logo" src="fotmob.png">
 
@@ -197,7 +175,7 @@ onclick="category('games')">
 </div>
 
 
-<div class="card" onclick="openPage('real')">
+<div class="card" onclick="openPage('real','apps')">
 
 <img class="logo" src="real_madrid.png">
 
@@ -210,9 +188,7 @@ onclick="category('games')">
 </div>
 
 
-<!-- Football Quiz -->
-
-<div class="card" onclick="openPage('quiz')">
+<div class="card" onclick="openPage('quiz','apps')">
 
 <img class="logo" src="football_quiz.png">
 
@@ -231,7 +207,7 @@ onclick="category('games')">
 
 <div id="games" class="grid" style="display:none">
 
-<div class="card" onclick="openPage('football')">
+<div class="card" onclick="openPage('football','games')">
 
 <img class="logo" src="football_life_simulator.png">
 
@@ -250,7 +226,7 @@ onclick="category('games')">
 
 <div id="football" class="detail">
 
-<div class="back" onclick="home()">
+<div class="back" onclick="backTo('games')">
 ← رجوع للألعاب
 </div>
 
@@ -264,13 +240,15 @@ onclick="category('games')">
 
 <a class="btn"
 href="https://play.google.com/store/apps/details?id=com.ludu.fls"
-target="_blank">
+target="_blank"
+onclick="event.stopPropagation()">
 🤖 Google Play
 </a>
 
 <a class="btn apple"
 href="https://apps.apple.com/us/app/football-life-simulator/id6670528564"
-target="_blank">
+target="_blank"
+onclick="event.stopPropagation()">
 🍎 App Store
 </a>
 
@@ -281,7 +259,7 @@ target="_blank">
 
 <div id="fotmob" class="detail">
 
-<div class="back" onclick="home()">
+<div class="back" onclick="backTo('apps')">
 ← رجوع للتطبيقات
 </div>
 
@@ -295,9 +273,142 @@ target="_blank">
 
 <a class="btn"
 href="https://play.google.com/store/apps/details?id=com.mobilefootie.wc2010"
-target="_blank">
+target="_blank"
+onclick="event.stopPropagation()">
 🤖 Google Play
 </a>
 
 <a class="btn apple"
-href="https://apps.apple.com/us/app/fotmob-soccer-live-scores/id488
+href="https://apps.apple.com/us/app/fotmob-soccer-live-scores/id488575683"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- Real Madrid -->
+
+<div id="real" class="detail">
+
+<div class="back" onclick="backTo('apps')">
+← رجوع للتطبيقات
+</div>
+
+<img class="logo" src="real_madrid.png">
+
+<h2>Real Madrid</h2>
+
+<p>
+التطبيق الرسمي لنادي ريال مدريد.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?id=com.mcentric.mcclient.MyMadrid"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+<a class="btn apple"
+href="https://apps.apple.com/us/app/real-madrid/id1107624540"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- Football Quiz -->
+
+<div id="quiz" class="detail">
+
+<div class="back" onclick="backTo('apps')">
+← رجوع للتطبيقات
+</div>
+
+<img class="logo" src="football_quiz.png">
+
+<h2>Football Quiz</h2>
+
+<p>
+اختبر معلوماتك في كرة القدم من خلال مجموعة من الأسئلة والتحديات الممتعة.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?id=com.boldcat.football"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+</div>
+
+</main>
+
+
+<script>
+
+function category(x){
+
+document.getElementById("apps").style.display =
+x === "apps" ? "grid" : "none";
+
+document.getElementById("games").style.display =
+x === "games" ? "grid" : "none";
+
+document.getElementById("appsBtn").classList.toggle(
+"active",
+x === "apps"
+);
+
+document.getElementById("gamesBtn").classList.toggle(
+"active",
+x === "games"
+);
+
+hideDetails();
+}
+
+
+function openPage(page, categoryName){
+
+document.getElementById("apps").style.display="none";
+document.getElementById("games").style.display="none";
+
+hideDetails();
+
+document.getElementById(page).style.display="block";
+}
+
+
+function hideDetails(){
+
+[
+"football",
+"fotmob",
+"real",
+"quiz"
+].forEach(function(id){
+
+document.getElementById(id).style.display="none";
+
+});
+
+}
+
+
+function backTo(categoryName){
+
+hideDetails();
+
+category(categoryName);
+
+}
+
+</script>
+
+</body>
+</html>
