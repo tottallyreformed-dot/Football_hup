@@ -7,15 +7,21 @@
 
 <style>
 *{box-sizing:border-box}
+
 body{
-margin:0;font-family:Arial;color:white;
+margin:0;
+font-family:Arial;
+color:white;
 background:radial-gradient(circle at top,#124d32,#07130d 50%,#030906);
 min-height:100vh
 }
+
 header{
-text-align:center;padding:30px 15px;
+text-align:center;
+padding:30px 15px;
 background:linear-gradient(135deg,#0b6338,#07130d)
 }
+
 .profile{
 width:75px;
 height:75px;
@@ -25,103 +31,228 @@ margin:0 auto 10px;
 display:block;
 border:3px solid #8ff0ba;
 }
-header h1{margin:8px 0;font-size:36px}
-.sub{color:#c8e8d7}
 
-main{max-width:900px;margin:25px auto;padding:0 15px}
-
-.menu{display:flex;gap:12px;margin-bottom:20px}
-.menu button{
-flex:1;padding:15px;border:1px solid #28734e;
-border-radius:14px;background:#102b1d;color:white;
-font-size:17px;font-weight:bold;cursor:pointer
+header h1{
+margin:8px 0;
+font-size:36px
 }
-.menu button.active{background:#19a463}
+
+.sub{
+color:#c8e8d7
+}
+
+main{
+max-width:900px;
+margin:25px auto;
+padding:0 15px
+}
+
+.menu{
+display:flex;
+gap:12px;
+margin-bottom:20px
+}
+
+.menu button{
+flex:1;
+padding:15px;
+border:1px solid #28734e;
+border-radius:14px;
+background:#102b1d;
+color:white;
+font-size:17px;
+font-weight:bold;
+cursor:pointer
+}
+
+.menu button.active{
+background:#19a463
+}
 
 .grid{
 display:grid;
 grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
 gap:16px
 }
+
 .card,.detail{
 background:linear-gradient(145deg,#163727,#081910);
-border:1px solid #28734e;border-radius:18px;
-padding:20px;box-shadow:0 10px 30px #0005
+border:1px solid #28734e;
+border-radius:18px;
+padding:20px;
+box-shadow:0 10px 30px #0005
 }
-.card{cursor:pointer;transition:.2s}
-.card:hover{transform:translateY(-3px)}
+
+.card{
+cursor:pointer;
+transition:.2s
+}
+
+.card:hover{
+transform:translateY(-3px)
+}
 
 .logo{
-width:72px;height:72px;border-radius:15px;
-object-fit:cover;background:white;margin-bottom:12px
+width:72px;
+height:72px;
+border-radius:15px;
+object-fit:cover;
+background:white;
+margin-bottom:12px
 }
+
 .icon{
-width:72px;height:72px;border-radius:15px;
-background:#19a463;display:flex;
-align-items:center;justify-content:center;
-font-size:38px;margin-bottom:12px
+width:72px;
+height:72px;
+border-radius:15px;
+background:#19a463;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:38px;
+margin-bottom:12px
 }
-.small,p,li{color:#cfe3d7;line-height:1.7}
-.detail{display:none}
-.back{color:#9fe0bd;cursor:pointer;margin-bottom:15px}
+
+.small,p,li{
+color:#cfe3d7;
+line-height:1.7
+}
+
+.detail{
+display:none
+}
+
+.back{
+color:#9fe0bd;
+cursor:pointer;
+margin-bottom:15px
+}
+
 .btn{
-display:block;text-align:center;
-text-decoration:none;background:#19a463;
-color:white;padding:14px;border-radius:10px;
-margin-top:15px;font-weight:bold
+display:block;
+text-align:center;
+text-decoration:none;
+background:#19a463;
+color:white;
+padding:14px;
+border-radius:10px;
+margin-top:15px;
+font-weight:bold
 }
-.apple{background:#111}
+
+.apple{
+background:#111
+}
 </style>
 </head>
 
 <body>
 
 <header>
+
 <img class="profile" src="profile.png" alt="ZikoFootball">
+
 <b style="color:#8ff0ba">ZikoFootball</b>
+
 <h1>⚽ Football Hub</h1>
-<div class="sub">أفضل التطبيقات والألعاب لعشاق كرة القدم</div>
+
+<div class="sub">
+أفضل التطبيقات والألعاب لعشاق كرة القدم
+</div>
+
 </header>
 
 <main>
 
 <div class="menu">
-<button id="appsBtn" class="active" onclick="category('apps')">📱 التطبيقات</button>
-<button id="gamesBtn" onclick="category('games')">🎮 الألعاب</button>
+
+<button id="appsBtn"
+class="active"
+onclick="category('apps')">
+📱 التطبيقات
+</button>
+
+<button id="gamesBtn"
+onclick="category('games')">
+🎮 الألعاب
+</button>
+
 </div>
 
+
 <!-- التطبيقات -->
+
 <div id="apps" class="grid">
 
 <div class="card" onclick="openPage('fotmob')">
+
 <img class="logo" src="fotmob.png">
+
 <h2>FotMob</h2>
-<div class="small">النتائج والأخبار والإحصائيات الكروية.</div>
+
+<div class="small">
+النتائج والأخبار والإحصائيات الكروية.
 </div>
+
+</div>
+
 
 <div class="card" onclick="openPage('real')">
+
 <img class="logo" src="real_madrid.png">
+
 <h2>Real Madrid</h2>
-<div class="small">التطبيق الرسمي لنادي ريال مدريد.</div>
+
+<div class="small">
+التطبيق الرسمي لنادي ريال مدريد.
 </div>
 
 </div>
+
+
+<!-- Football Quiz -->
+
+<div class="card" onclick="openPage('quiz')">
+
+<img class="logo" src="football_quiz.png">
+
+<h2>Football Quiz</h2>
+
+<div class="small">
+اختبر معلوماتك في كرة القدم وتحدى نفسك.
+</div>
+
+</div>
+
+</div>
+
 
 <!-- الألعاب -->
+
 <div id="games" class="grid" style="display:none">
 
 <div class="card" onclick="openPage('football')">
-<img class="logo" src="football_life_simulator.png"> 
+
+<img class="logo" src="football_life_simulator.png">
+
 <h2>Football Life Simulator</h2>
-<div class="small">محاكاة حياة لاعب كرة قدم.</div>
+
+<div class="small">
+محاكاة حياة لاعب كرة قدم.
 </div>
 
 </div>
+
+</div>
+
 
 <!-- Football Life Simulator -->
+
 <div id="football" class="detail">
 
-<div class="back" onclick="home()">← رجوع للألعاب</div>
+<div class="back" onclick="home()">
+← رجوع للألعاب
+</div>
 
 <img class="logo" src="football_life_simulator.png">
 
@@ -145,73 +276,28 @@ target="_blank">
 
 </div>
 
+
 <!-- FotMob -->
+
 <div id="fotmob" class="detail">
 
-<div class="back" onclick="home()">← رجوع للتطبيقات</div>
+<div class="back" onclick="home()">
+← رجوع للتطبيقات
+</div>
+
 <img class="logo" src="fotmob.png">
 
 <h2>FotMob</h2>
-<p>تابع النتائج المباشرة والأخبار والإحصائيات.</p>
+
+<p>
+تابع النتائج المباشرة والأخبار والإحصائيات.
+</p>
 
 <a class="btn"
 href="https://play.google.com/store/apps/details?id=com.mobilefootie.wc2010"
-target="_blank">🤖 Google Play</a>
+target="_blank">
+🤖 Google Play
+</a>
 
 <a class="btn apple"
-href="https://apps.apple.com/us/app/fotmob-soccer-live-scores/id488575683"
-target="_blank">🍎 App Store</a>
-
-</div>
-
-<!-- Real Madrid -->
-<div id="real" class="detail">
-
-<div class="back" onclick="home()">← رجوع للتطبيقات</div>
-<img class="logo" src="real_madrid.png">
-
-<h2>Real Madrid</h2>
-<p>التطبيق الرسمي لنادي ريال مدريد.</p>
-
-<a class="btn"
-href="https://play.google.com/store/apps/details?id=com.mcentric.mcclient.MyMadrid"
-target="_blank">🤖 Google Play</a>
-
-<a class="btn apple"
-href="https://apps.apple.com/us/app/real-madrid/id1107624540"
-target="_blank">🍎 App Store</a>
-
-</div>
-
-</main>
-
-<script>
-function category(x){
-document.getElementById("apps").style.display=x=="apps"?"grid":"none";
-document.getElementById("games").style.display=x=="games"?"grid":"none";
-document.getElementById("appsBtn").classList.toggle("active",x=="apps");
-document.getElementById("gamesBtn").classList.toggle("active",x=="games");
-homeDetails();
-}
-
-function openPage(x){
-document.getElementById("apps").style.display="none";
-document.getElementById("games").style.display="none";
-homeDetails();
-document.getElementById(x).style.display="block";
-}
-
-function homeDetails(){
-["football","fotmob","real"].forEach(x=>{
-document.getElementById(x).style.display="none";
-});
-}
-
-function home(){
-homeDetails();
-category("apps");
-}
-</script>
-
-</body>
-  </html>
+href="https://apps.apple.com/us/app/fotmob-soccer-live-scores/id488
