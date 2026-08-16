@@ -162,6 +162,23 @@ onclick="category('games')">
 
 <div id="apps" class="grid">
 
+<!-- DramaWorld - التطبيق الجديد -->
+
+<div class="card" onclick="openPage('dramaworld','apps')">
+
+<img class="logo" src="dramaworld.png">
+
+<h2>DramaWorld</h2>
+
+<div class="small">
+تطبيق لمشاهدة الأفلام والمسلسلات مجاناً.
+</div>
+
+</div>
+
+
+<!-- التطبيقات القديمة -->
+
 <div class="card" onclick="openPage('fotmob','apps')">
 
 <img class="logo" src="fotmob.png">
@@ -207,6 +224,23 @@ onclick="category('games')">
 
 <div id="games" class="grid" style="display:none">
 
+<!-- FIFA Heroes - اللعبة الجديدة -->
+
+<div class="card" onclick="openPage('fifaHeroes','games')">
+
+<img class="logo" src="fifa_heroes.png">
+
+<h2>FIFA Heroes</h2>
+
+<div class="small">
+لعبة كرة قدم سريعة بنظام 5 ضد 5.
+</div>
+
+</div>
+
+
+<!-- اللعبة القديمة -->
+
 <div class="card" onclick="openPage('football','games')">
 
 <img class="logo" src="football_life_simulator.png">
@@ -218,6 +252,65 @@ onclick="category('games')">
 </div>
 
 </div>
+
+</div>
+
+
+<!-- FIFA Heroes -->
+
+<div id="fifaHeroes" class="detail">
+
+<div class="back" onclick="backTo('games')">
+← رجوع للألعاب
+</div>
+
+<img class="logo" src="fifa_heroes.png">
+
+<h2>FIFA Heroes</h2>
+
+<p>
+لعبة كرة قدم سريعة وممتعة بنظام 5 ضد 5، مع شخصيات وقدرات خاصة.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?hl=ar&id=com.solace.fifaheroes"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+<a class="btn apple"
+href="https://apps.apple.com/ma/app/fifa-heroes-football-action/id6760320099"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- DramaWorld -->
+
+<div id="dramaworld" class="detail">
+
+<div class="back" onclick="backTo('apps')">
+← رجوع للتطبيقات
+</div>
+
+<img class="logo" src="dramaworld.png">
+
+<h2>DramaWorld</h2>
+
+<p>
+تطبيق لمشاهدة الأفلام والمسلسلات مجاناً، بواجهة سهلة للاستعمال.
+</p>
+
+<a class="btn"
+href="https://dramaworld.aflamilive.com/"
+target="_blank"
+onclick="event.stopPropagation()">
+🌐 الموقع الرسمي
+</a>
 
 </div>
 
@@ -387,6 +480,8 @@ document.getElementById(page).style.display="block";
 function hideDetails(){
 
 [
+"fifaHeroes",
+"dramaworld",
 "football",
 "fotmob",
 "real",
