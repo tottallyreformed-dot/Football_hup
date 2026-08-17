@@ -10,19 +10,16 @@
 
 body{
 margin:0;
-font-family:Arial,sans-serif;
+font-family:Arial;
 color:white;
-background:
-radial-gradient(circle at top,#17613f,#07130d 50%,#030906);
+background:radial-gradient(circle at top,#124d32,#07130d 50%,#030906);
 min-height:100vh
 }
 
 header{
 text-align:center;
 padding:30px 15px;
-background:linear-gradient(135deg,#0b6338,#07130d);
-border-bottom:1px solid #28734e;
-box-shadow:0 5px 25px #0006
+background:linear-gradient(135deg,#0b6338,#07130d)
 }
 
 .profile{
@@ -32,8 +29,7 @@ border-radius:50%;
 object-fit:cover;
 margin:0 auto 10px;
 display:block;
-border:3px solid #8ff0ba;
-box-shadow:0 0 20px #19a46355
+border:3px solid #8ff0ba
 }
 
 header h1{
@@ -41,52 +37,13 @@ margin:8px 0;
 font-size:36px
 }
 
-header b{
-color:#8ff0ba
-}
-
-.sub{
-color:#c8e8d7
-}
+.sub{color:#c8e8d7}
 
 main{
 max-width:900px;
 margin:25px auto;
 padding:0 15px
 }
-
-/* البحث */
-
-.search{
-position:relative;
-margin-bottom:20px
-}
-
-.search input{
-width:100%;
-padding:16px 48px 16px 18px;
-border:1px solid #28734e;
-border-radius:15px;
-background:#0b2015;
-color:white;
-font-size:16px;
-outline:none;
-box-shadow:0 5px 20px #0004
-}
-
-.search input:focus{
-border-color:#19a463;
-box-shadow:0 0 15px #19a46355
-}
-
-.search-icon{
-position:absolute;
-right:16px;
-top:13px;
-font-size:22px
-}
-
-/* الأزرار */
 
 .menu{
 display:flex;
@@ -103,21 +60,10 @@ background:#102b1d;
 color:white;
 font-size:17px;
 font-weight:bold;
-cursor:pointer;
-transition:.2s
+cursor:pointer
 }
 
-.menu button:hover{
-background:#17452e
-}
-
-.menu button.active{
-background:linear-gradient(135deg,#19a463,#117747);
-border-color:#5bd99a;
-box-shadow:0 5px 18px #19a46344
-}
-
-/* البطاقات */
+.menu button.active{background:#19a463}
 
 .grid{
 display:grid;
@@ -135,26 +81,10 @@ box-shadow:0 10px 30px #0005
 
 .card{
 cursor:pointer;
-transition:.25s;
-position:relative;
-overflow:hidden
+transition:.2s
 }
 
-.card:before{
-content:"";
-position:absolute;
-top:0;
-right:0;
-left:0;
-height:3px;
-background:#19a463
-}
-
-.card:hover{
-transform:translateY(-5px);
-border-color:#3d9b69;
-box-shadow:0 15px 35px #0008
-}
+.card:hover{transform:translateY(-3px)}
 
 .logo{
 width:72px;
@@ -162,13 +92,7 @@ height:72px;
 border-radius:15px;
 object-fit:cover;
 background:white;
-margin-bottom:12px;
-box-shadow:0 5px 15px #0005
-}
-
-.card h2{
-margin:5px 0;
-font-size:21px
+margin-bottom:12px
 }
 
 .small,p,li{
@@ -176,120 +100,27 @@ color:#cfe3d7;
 line-height:1.7
 }
 
-/* النجوم */
-
-.rating{
-margin:6px 0 5px;
-font-size:19px;
-letter-spacing:2px
-}
-
-.rating .stars{
-color:#ffd43b;
-text-shadow:0 0 8px #ffd43b55
-}
-
-.rating .number{
-color:#a9c7b7;
-font-size:13px;
-letter-spacing:0
-}
-
-/* التفاصيل */
-
-.detail{
-display:none;
-animation:appear .3s ease
-}
-
-@keyframes appear{
-from{
-opacity:0;
-transform:translateY(10px)
-}
-to{
-opacity:1;
-transform:translateY(0)
-}
-}
+.detail{display:none}
 
 .back{
 color:#9fe0bd;
 cursor:pointer;
-margin-bottom:15px;
-font-weight:bold
+margin-bottom:15px
 }
 
 .btn{
 display:block;
 text-align:center;
 text-decoration:none;
-background:linear-gradient(135deg,#19a463,#117747);
+background:#19a463;
 color:white;
 padding:14px;
 border-radius:10px;
 margin-top:15px;
-font-weight:bold;
-transition:.2s
+font-weight:bold
 }
 
-.btn:hover{
-transform:scale(1.02)
-}
-
-.apple{
-background:#111;
-border:1px solid #444
-}
-
-.noResult{
-display:none;
-text-align:center;
-padding:25px;
-color:#cfe3d7;
-background:#0b2015;
-border:1px solid #28734e;
-border-radius:18px
-}
-
-@media(max-width:600px){
-
-header h1{
-font-size:31px
-}
-
-.grid{
-grid-template-columns:repeat(2,1fr);
-gap:12px
-}
-
-.card{
-padding:15px
-}
-
-.card h2{
-font-size:18px
-}
-
-.logo{
-width:65px;
-height:65px
-}
-
-.menu button{
-font-size:15px;
-padding:13px
-}
-
-}
-
-@media(max-width:390px){
-
-.grid{
-grid-template-columns:1fr
-}
-
-}
+.apple{background:#111}
 </style>
 </head>
 
@@ -299,7 +130,7 @@ grid-template-columns:1fr
 
 <img class="profile" src="appzone.png" alt="AppZone">
 
-<b>AppZone</b>
+<b style="color:#8ff0ba">AppZone</b>
 
 <h1>📱 AppZone</h1>
 
@@ -311,64 +142,33 @@ grid-template-columns:1fr
 
 <main>
 
-<!-- البحث -->
-
-<div class="search">
-
-<div class="search-icon">🔍</div>
-
-<input
-type="text"
-id="searchInput"
-placeholder="ابحث عن تطبيق أو لعبة..."
-oninput="searchItems()">
-
-</div>
-
-
-<!-- القائمة -->
-
 <div class="menu">
 
-<button
-id="appsBtn"
+<button id="appsBtn"
 class="active"
 onclick="category('apps')">
-
 📱 التطبيقات
-
 </button>
 
-<button
-id="gamesBtn"
+<button id="gamesBtn"
 onclick="category('games')">
-
 🎮 الألعاب
-
 </button>
 
 </div>
 
 
-<!-- ================= التطبيقات ================= -->
+<!-- التطبيقات -->
 
 <div id="apps" class="grid">
 
-
 <!-- DramaWorld -->
 
-<div class="card searchable"
-data-name="DramaWorld"
-onclick="openPage('dramaworld')">
+<div class="card" onclick="openPage('dramaworld','apps')">
 
 <img class="logo" src="dramaworld.png">
 
 <h2>DramaWorld</h2>
-
-<div class="rating">
-<span class="stars">★★★★★</span>
-<span class="number">4.8</span>
-</div>
 
 <div class="small">
 تطبيق لمشاهدة الأفلام والمسلسلات مجاناً.
@@ -379,18 +179,11 @@ onclick="openPage('dramaworld')">
 
 <!-- FotMob -->
 
-<div class="card searchable"
-data-name="FotMob"
-onclick="openPage('fotmob')">
+<div class="card" onclick="openPage('fotmob','apps')">
 
 <img class="logo" src="fotmob.png">
 
 <h2>FotMob</h2>
-
-<div class="rating">
-<span class="stars">★★★★★</span>
-<span class="number">4.7</span>
-</div>
 
 <div class="small">
 النتائج والأخبار والإحصائيات الكروية.
@@ -401,18 +194,11 @@ onclick="openPage('fotmob')">
 
 <!-- Real Madrid -->
 
-<div class="card searchable"
-data-name="Real Madrid"
-onclick="openPage('real')">
+<div class="card" onclick="openPage('real','apps')">
 
 <img class="logo" src="real_madrid.png">
 
 <h2>Real Madrid</h2>
-
-<div class="rating">
-<span class="stars">★★★★★</span>
-<span class="number">4.8</span>
-</div>
 
 <div class="small">
 التطبيق الرسمي لنادي ريال مدريد.
@@ -423,18 +209,11 @@ onclick="openPage('real')">
 
 <!-- Football Quiz -->
 
-<div class="card searchable"
-data-name="Football Quiz"
-onclick="openPage('quiz')">
+<div class="card" onclick="openPage('quiz','apps')">
 
 <img class="logo" src="football_quiz.png">
 
 <h2>Football Quiz</h2>
-
-<div class="rating">
-<span class="stars">★★★★☆</span>
-<span class="number">4.4</span>
-</div>
 
 <div class="small">
 اختبر معلوماتك في كرة القدم وتحدى نفسك.
@@ -445,28 +224,21 @@ onclick="openPage('quiz')">
 </div>
 
 
-<!-- ================= الألعاب ================= -->
+<!-- الألعاب -->
 
 <div id="games" class="grid" style="display:none">
 
 
-<!-- Boxing Star - الأولى -->
+<!-- Boxing Star - اللعبة الجديدة -->
 
-<div class="card searchable"
-data-name="Boxing Star"
-onclick="openPage('boxingStar')">
+<div class="card" onclick="openPage('boxingStar','games')">
 
 <img class="logo" src="boxing_star.png">
 
 <h2>Boxing Star</h2>
 
-<div class="rating">
-<span class="stars">★★★★★</span>
-<span class="number">4.6</span>
-</div>
-
 <div class="small">
-لعبة ملاكمة ممتعة، قاتل وتدرب وطوّر شخصيتك لتصبح بطل الملاكمة.
+لعبة ملاكمة ممتعة ومليئة بالتحديات.
 </div>
 
 </div>
@@ -474,18 +246,11 @@ onclick="openPage('boxingStar')">
 
 <!-- FIFA Heroes -->
 
-<div class="card searchable"
-data-name="FIFA Heroes"
-onclick="openPage('fifaHeroes')">
+<div class="card" onclick="openPage('fifaHeroes','games')">
 
 <img class="logo" src="fifa_heroes.png">
 
 <h2>FIFA Heroes</h2>
-
-<div class="rating">
-<span class="stars">★★★★☆</span>
-<span class="number">4.4</span>
-</div>
 
 <div class="small">
 لعبة كرة قدم سريعة بنظام 5 ضد 5.
@@ -496,13 +261,303 @@ onclick="openPage('fifaHeroes')">
 
 <!-- Football Life Simulator -->
 
-<div class="card searchable"
-data-name="Football Life Simulator"
-onclick="openPage('football')">
+<div class="card" onclick="openPage('football','games')">
 
 <img class="logo" src="football_life_simulator.png">
 
 <h2>Football Life Simulator</h2>
 
-<div class="rating">
-<span class="stars">★★★★
+<div class="small">
+محاكاة حياة لاعب كرة قدم.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- Boxing Star -->
+
+<div id="boxingStar" class="detail">
+
+<div class="back" onclick="backTo('games')">
+← رجوع للألعاب
+</div>
+
+<img class="logo" src="boxing_star.png">
+
+<h2>Boxing Star</h2>
+
+<p>
+لعبة ملاكمة ممتعة ومليئة بالتحديات، درّب شخصيتك ونافس الملاكمين الآخرين.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?id=com.ftt.boxingstar.gl"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+<a class="btn apple"
+href="https://apps.apple.com/us/app/boxing-star/id1280335722"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- FIFA Heroes -->
+
+<div id="fifaHeroes" class="detail">
+
+<div class="back" onclick="backTo('games')">
+← رجوع للألعاب
+</div>
+
+<img class="logo" src="fifa_heroes.png">
+
+<h2>FIFA Heroes</h2>
+
+<p>
+لعبة كرة قدم سريعة وممتعة بنظام 5 ضد 5، مع شخصيات وقدرات خاصة.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?hl=ar&id=com.solace.fifaheroes"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+<a class="btn apple"
+href="https://apps.apple.com/ma/app/fifa-heroes-football-action/id6760320099"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- DramaWorld -->
+
+<div id="dramaworld" class="detail">
+
+<div class="back" onclick="backTo('apps')">
+← رجوع للتطبيقات
+</div>
+
+<img class="logo" src="dramaworld.png">
+
+<h2>DramaWorld</h2>
+
+<p>
+تطبيق لمشاهدة الأفلام والمسلسلات مجاناً، بواجهة سهلة للاستعمال.
+</p>
+
+<a class="btn"
+href="https://dramaworld.aflamilive.com/"
+target="_blank"
+onclick="event.stopPropagation()">
+🌐 الموقع الرسمي
+</a>
+
+</div>
+
+
+<!-- Football Life Simulator -->
+
+<div id="football" class="detail">
+
+<div class="back" onclick="backTo('games')">
+← رجوع للألعاب
+</div>
+
+<img class="logo" src="football_life_simulator.png">
+
+<h2>Football Life Simulator</h2>
+
+<p>
+عش حياة لاعب كرة قدم محترف وطوّر مسيرتك داخل اللعبة.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?id=com.ludu.fls"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+<a class="btn apple"
+href="https://apps.apple.com/us/app/football-life-simulator/id6670528564"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- FotMob -->
+
+<div id="fotmob" class="detail">
+
+<div class="back" onclick="backTo('apps')">
+← رجوع للتطبيقات
+</div>
+
+<img class="logo" src="fotmob.png">
+
+<h2>FotMob</h2>
+
+<p>
+تابع النتائج المباشرة والأخبار والإحصائيات.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?id=com.mobilefootie.wc2010"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+<a class="btn apple"
+href="https://apps.apple.com/us/app/fotmob-soccer-live-scores/id488575683"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- Real Madrid -->
+
+<div id="real" class="detail">
+
+<div class="back" onclick="backTo('apps')">
+← رجوع للتطبيقات
+</div>
+
+<img class="logo" src="real_madrid.png">
+
+<h2>Real Madrid</h2>
+
+<p>
+التطبيق الرسمي لنادي ريال مدريد.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?id=com.mcentric.mcclient.MyMadrid"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+<a class="btn apple"
+href="https://apps.apple.com/us/app/real-madrid/id1107624540"
+target="_blank"
+onclick="event.stopPropagation()">
+🍎 App Store
+</a>
+
+</div>
+
+
+<!-- Football Quiz -->
+
+<div id="quiz" class="detail">
+
+<div class="back" onclick="backTo('apps')">
+← رجوع للتطبيقات
+</div>
+
+<img class="logo" src="football_quiz.png">
+
+<h2>Football Quiz</h2>
+
+<p>
+اختبر معلوماتك في كرة القدم من خلال مجموعة من الأسئلة والتحديات الممتعة.
+</p>
+
+<a class="btn"
+href="https://play.google.com/store/apps/details?id=com.boldcat.football"
+target="_blank"
+onclick="event.stopPropagation()">
+🤖 Google Play
+</a>
+
+</div>
+
+</main>
+
+
+<script>
+
+function category(x){
+
+document.getElementById("apps").style.display =
+x === "apps" ? "grid" : "none";
+
+document.getElementById("games").style.display =
+x === "games" ? "grid" : "none";
+
+document.getElementById("appsBtn").classList.toggle(
+"active",
+x === "apps"
+);
+
+document.getElementById("gamesBtn").classList.toggle(
+"active",
+x === "games"
+);
+
+hideDetails();
+}
+
+
+function openPage(page, categoryName){
+
+document.getElementById("apps").style.display="none";
+document.getElementById("games").style.display="none";
+
+hideDetails();
+
+document.getElementById(page).style.display="block";
+}
+
+
+function hideDetails(){
+
+[
+"boxingStar",
+"fifaHeroes",
+"dramaworld",
+"football",
+"fotmob",
+"real",
+"quiz"
+].forEach(function(id){
+
+document.getElementById(id).style.display="none";
+
+});
+
+}
+
+
+function backTo(categoryName){
+
+hideDetails();
+
+category(categoryName);
+
+}
+
+</script>
+
+</body>
+</html>
